@@ -1,0 +1,4 @@
+Jun 08, 2023 12:15:49 PM com.example.musicplayerfx.controllers.SongController onSubmit
+INFO: onSubmit() method started
+Jun 08, 2023 12:15:52 PM com.example.musicplayerfx.controllers.SongController onSubmit
+WARNING: Input field validation failed

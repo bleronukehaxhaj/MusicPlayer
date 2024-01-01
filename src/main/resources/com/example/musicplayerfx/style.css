@@ -1,0 +1,117 @@
+.scroll-pane .viewport {
+    -fx-background-color: linear-gradient(to bottom , #8360c3, #2ebf91);
+}
+
+/* Labels styles */
+.label-bold {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.label-bold,
+.text-field,
+.combo-box {
+    -fx-font-family: "Arial";
+}
+
+/* Buttons styles */
+.button {
+    -fx-background-color: #27374D;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+}
+
+.button:hover {
+    -fx-background-color: #526D82;
+}
+
+/* MenuBar styles */
+.menu-bar {
+    -fx-background-color: #79A3B1;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
+
+.menu-bar:hover {
+    -fx-background-color: #52616B;
+    -fx-text-fill: #000000;
+}
+
+.menu {
+    -fx-background-color: transparent;
+}
+
+.menu-item {
+    -fx-background-color: #79A3B1;
+    -fx-text-fill: #000000;
+}
+
+/* TextField styles */
+.text-field {
+    -fx-background-color: #EEEEEE;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #27374D;
+    -fx-border-width: 1px;
+}
+
+/* ComboBox styles */
+.combo-box {
+    -fx-background-color: #EEEEEE;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #E5E5E5;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.combo-box:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+.combo-box:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #14213D;
+    -fx-border-width: 1px;
+}
+
+/* ListView styles */
+.list-view {
+    -fx-background-color: #e1e5f2;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #9DB2BF;
+    -fx-text-fill: #000000;
+}
+
+/* TableView styles */
+.table-view {
+    -fx-background-color: #e1e5f2;
+}
+
+.table-view .column-header  {
+    -fx-background-color: #9DB2BF;
+    -fx-text-fill: #FFFFFF;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #EEEEEE;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #9DB2BF;
+    -fx-text-fill: #000000;
+}

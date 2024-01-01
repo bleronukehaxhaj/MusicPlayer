@@ -1,0 +1,38 @@
+create database MusicPlayer
+
+
+create table Song(
+	Id int primary key identity (1,1),
+	Title varchar(50),
+	Artist varchar(50),
+	DurationInSeconds int,
+	ReleaseDate date,
+	Language varchar(50),
+	Producer varchar(50),
+	Songwriter varchar(50),
+	Feature varchar(50) null,
+	Genre varchar(50),
+	Mood varchar(50),
+	FileFormat varchar(50)
+)
+
+
+create table Lyrics(
+	Id int primary key identity(1,1),
+	SongId int,
+	Content varchar(max)
+	FOREIGN KEY (SongId) REFERENCES Song(Id)
+)
+
+INSERT INTO Song (Title, Artist, DurationInSeconds, ReleaseDate, Language, Producer, Songwriter, Feature, Genre, Mood, FileFormat)
+VALUES
+    ('Song Title 1', 'Artist 1', 240, '2023-01-01', 'English', 'Producer 1', 'Songwriter 1', NULL, 'POP', 'HAPPY', 'MP3'),
+    ('Song Title 2', 'Artist 2', 180, '2022-07-15', 'Spanish', 'Producer 2', 'Songwriter 2', 'Featured Artist', 'ELECTRONIC', 'ENERGETIC', 'MP3'),
+    ('Song Title 3', 'Artist 3', 320, '2021-12-05', 'French', 'Producer 3', 'Songwriter 3', NULL, 'HIP_HOP', 'SAD', 'WAV')
+
+
+INSERT INTO Lyrics ([SongId], [Content])
+VALUES
+    (1, 'Hello, World! It s nice to meet you'),
+    (2, 'I am not lazy, I am just on energy-saving mode'),
+    (3, 'Coding all day and debugging all night')

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.musicplayerfx.controllers.SongController"
+            prefHeight="400.0" prefWidth="600.0" fitToWidth="true">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <content>
+        <GridPane alignment="CENTER" gridLinesVisible="false" hgap="15" vgap="15">
+
+            <HBox GridPane.columnSpan="2">
+                <MenuBar>
+                    <Menu text="Application">
+                        <MenuItem text="Exit" fx:id="exitMenuItem" onAction="#exitMenuItemClicked"/>
+                    </Menu>
+                </MenuBar>
+
+                <MenuBar>
+                    <Menu text="Help">
+                        <MenuItem text="About Us" onAction="#showAboutUs"/>
+                    </Menu>
+                </MenuBar>
+            </HBox>
+
+
+            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="label-bold"/>
+            <TextField fx:id="titleField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Artist:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="label-bold"/>
+            <TextField fx:id="artistField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Duration (Seconds):" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="label-bold"/>
+            <TextField fx:id="durationField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Release Date:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="label-bold"/>
+            <DatePicker fx:id="releaseDateField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <Label text="Language:" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="label-bold"/>
+            <TextField fx:id="languageField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+            <Label text="Producer:" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="label-bold"/>
+            <TextField fx:id="producerField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+            <Label text="Songwriter:" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="label-bold"/>
+            <TextField fx:id="songwriterField" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+            <Label text="Feature:" GridPane.columnIndex="0" GridPane.rowIndex="8" styleClass="label-bold"/>
+            <TextField fx:id="featureField" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+            <HBox GridPane.columnSpan="2" GridPane.rowIndex="9" spacing="10">
+                <Label text="Genre:" styleClass="label-bold"/>
+                <ComboBox fx:id="genreComboBox"/>
+
+                <Label text="Mood:" styleClass="label-bold"/>
+                <ComboBox fx:id="moodComboBox"/>
+
+                <Label text="File Format:" styleClass="label-bold"/>
+                <ComboBox fx:id="fileFormatComboBox"/>
+            </HBox>
+
+            <HBox spacing="10" GridPane.rowIndex="10">
+                <Button text="Submit" fx:id="btnSubmit" onAction="#onSubmit"/>
+                <Button text="Reset" fx:id="btnReset" onAction="#reset"/>
+                <Button text="Delete" fx:id="btnDelete" onAction="#delete"/>
+                <Button text="Report" fx:id="btnReport" onAction="#handleReportButtonAction"/>
+            </HBox>
+
+            <Label text="Songs list" GridPane.rowIndex="11" GridPane.columnSpan="2" styleClass="label-bold"/>
+            <ListView fx:id="listSongs" GridPane.rowIndex="12" GridPane.columnSpan="2"/>
+
+            <Label text="Songs table" GridPane.rowIndex="13" GridPane.columnSpan="2" styleClass="label-bold"/>
+            <TableView fx:id="tableSongs" GridPane.rowIndex="14" GridPane.columnSpan="2"/>
+
+        </GridPane>
+    </content>
+
+</ScrollPane>
